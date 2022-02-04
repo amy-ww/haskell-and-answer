@@ -4,6 +4,9 @@
 
 This project is in fulfillment of the [CPSC 312 2021W1 project requirements](https://steven-wolfman.github.io/cpsc-312-website/project.html).
 
+## Team Name
+We call ourselves: squidGame
+
 ## Team Members
 
 Our team is:
@@ -12,96 +15,79 @@ Our team is:
 + Amy Wang
 + Winnie Wen
 
-We call ourselves: Dalgona Players
+## Link to Video
+https://youtu.be/GuXFRRKZcvw
 
-## Product Pitch
+## Link to Proposal
+https://github.students.cs.ubc.ca/zwang110/haskell-project/tree/98ea6b4141669ced584bbcbde2c1df7a9453ff6d
 
-While the PrairieLearn in-class exercises for CPSC 312 are helpful for studying for quizzes, sometimes us students have trouble staying motivated to do them. Maybe incorporating the current trend is what we need to keep us engaged while learning and reviewing functional programming in Haskell.
+## Guide to Minimal Viable Project
+### How the MVP fulfills the proposal
+This minimal viable project fulfills the proposal in that it is a trivia game that challenges users with questions about Haskell in order to successfully carve a circle out of the dalgona candy surface.  Inspired by the trending dalgona challenge from the hit show Squid Game, the minimal viable project consists of the core features of the game for a single level while still providing a fun way to study for our upcoming final quiz. It prompts the user with multiple choice questions about concepts in Haskell with four options: “a”, “b”, “c”, and “d”. The user’s input is then compared against the corresponding letter for the correct answer. A curved line will be displayed on the circular canvas if the input was the same as the letter for the correct answer, signifying that the user has successfully carved out a part of the shape on the canvas. The text “Game Over” will be displayed if the input differs. In addition to what we had originally proposed, the user can now restart the game to try the questions again.
 
-Introducing (H)Ask(ell) & Answer : Squid Game’s Dalgona Challenge Edition, a trivia game about Haskell inspired by the popular Netflix show, Squid Game. For each correct answer, a line will be carved on a circular canvas, which represents the dalgona (also known as honeycomb) candy depicted in the show. The goal of the game is to answer enough questions correctly to carve out a shape in the center of the canvas (such as a triangle, a square, a star, a circle, an umbrella, etc.). As the game progresses, the user will level up, where the questions become more difficult and the image needed to be carved will become more complex. If the user answers a question incorrectly, the game is over.
+Instead of simply displaying a curved line on a circular canvas where the images are given from the Gloss library, we have incorporated the use of Bitmaps. This not only makes the GUI more visually appealing, but users can also now be able to tell how our game incorporates elements of the TV show. For example, the start screen is a reference to when the main character is challenged to a game of ddakji and given a business card to enter the Squid Games. The question screens with the circle being carved from the dalgona candy surface are also a clear reference to the dalgona challenge they played in the show. By using Bitmaps to clearly depict references from the show, users will feel more motivated to continue playing the game and learn more about Haskell.
 
-## Minimal Viable Project
+Overall, the minimal viable project solves the important problem of students losing motivation to study, especially since it is near the end of the term when they are burnt out. It does so by gamifying the studying process with references to a current trend.
 
-The minimal viable project consists of the core features of the game for a single level.  This level will have four questions in order for the user to “carve out” a circle from the circular canvas. The user will be prompted with a multiple choice question about concepts in Haskell and are given four options labelled “a”, “b”, “c”, and “d”. The user’s input will be compared against the corresponding letter for the correct answer. A curved line will be displayed on the screen if the input was the same as the letter for the correct answer, signifying that the user has successfully carved out a part of the shape on the canvas. The text  “Game Over” will be displayed if the input differs.
-
-This builds meaningfully towards the product pitch because it is still a trivia game that challenges users with questions about Haskell while providing motivation by incorporating elements of the trending dalgona challenge from Squid Game. The minimal viable project still holds the core concept where the user has to answer questions correctly in order to fully draw a shape (in this case, a circle) in the middle of the canvas. Like the product pitch, the minimal viable project still needs to handle user input and present graphics in a GUI. However, it is not nearly as much work because we have established a limit as to how long the user can play since there is only one level for the user to complete. This is compared to the amount of work required for the entire product, which would have multiple levels and require learning how to draw many shapes, some of which would be fairly complex. Only having one level where the goal is to carve out a circle means that we only have to display four curved lines on the canvas when the user inputs correct answers, compared to multiple lines and curves like the umbrella shape that also appeared in Squid Game. Furthermore, restricting the questions to only be multiple choice allows us to focus on correctly handling user input without worrying about displaying what the user is typing like with questions that may require short answers or code.
-
-The minimal viable project is language-appropriate since Haskell is a general-purpose language. It builds on the strengths and power of Haskell because there are a lot of abstract data types in a game and Haskell conveniently allows us to define our own data types. This allows us to have many options on how to represent a state of the game. Haskell’s unique type checker also catches errors before runtime which will help us catch errors earlier and improve testing. The fact that Haskell is pure means that we do not need to worry about side effects, which will be especially helpful if we choose to call a function with a state as its argument. Lastly, laziness results in faster runtime and uses less resources in general.
-
-The project leads naturally to learning and applying some new element of the language because we will be building on top of the existing Gloss library to create a GUI. Through this process, we are learning more about Haskell libraries, importing modules, and managing dependencies. The Gloss library allows us to use many new elements of Haskell while simplifying the process.
-
-
-## Proof of Concept
-
-The proof of concept prompts the user to type “a”, “b”, “c”, and “d” in that order. When the user presses “a”, a curved line will appear. When they follow it with “b”, “c”, and “d”, more curved lines will also be displayed, connecting to the previous one. Once the user hits all of those letters, the image formed should be a circle.
-
-The key elements of the project the proof-of-concept focuses on is the I/O element and drawing on a GUI. In terms of I/O, the program needs to be able to display a question (output), get what key the user pressed (input), and compare it to see if they input the correct letters. This is an important element because other aspects of the Minimal Viable Project rely on this element, such as when to draw a curve and when to end the game. Drawing on the GUI, particularly drawing a curved line, is an important element because the shape that we have chosen for the user to carve in the Minimal Viable Project, a circle, is based on curved lines. This visualization of carving out a shape on the honeycomb candy canvas serves as the user’s main motivation for the game.
-
-By completing this proof-of-concept, we have confidence that, with sufficient work, we could complete the full (minimal viable) project because our game mainly consists of using the user’s input to draw curved lines. Since we have completed drawing a circle through user input, we can simply add a larger circle to always be displayed on the screen for the dalgona canvas. Furthermore, now that we have figured out how to respond when the user inputs the correct answer, we expect it to be easy to adapt our knowledge to display questions in between hitting the keys for the answers.
-
-### Lines that correspond to what we’ve accomplished and how it fulfills the requirements:
-* Lines 1-37: setup
-* Lines 40-41: extracts picture for drawing the curved lines (and eventually the circle) for later
-* Lines 44-48: key handle the multiple choice options “a”, “b”, “c”, “d”
-* Line 52-57: prepares the world to be changed for the event handler to check in order to add a curve to the image
-* Lines 60-68: runs the program
+### Key elements of the MVP Code
+- Defining the Worlds and Images: https://github.students.cs.ubc.ca/zwang110/haskell-project/blob/f25a4bc2c5fa304eff183aafb0381d1caf9dc467/haskell/app/Game.hs#L28-L42
+  - Defining our worlds to represent each state of the game, where it is a struct of the num corresponding to which number World the user is currently on, pic corresponding to the Picture that corresponds to the World, and next to define whether the user is ready to move to the next World
+  - Defining the images was a key element to allow us to use them in our program to create a visually appealing experience
+  - This helped with our learning of the language as we learned a new syntax for defining data types: record syntax
+- Event Handler to deal with user input: https://github.students.cs.ubc.ca/zwang110/haskell-project/blob/f25a4bc2c5fa304eff183aafb0381d1caf9dc467/haskell/app/Game.hs#L61-L74
+  -  This gets the user to move on to the next question if they answer the question right, move on to the next level if they finish answering all the questions for that level, end the game if they answer a question incorrectly, or allow the user to reset the game.
+  -  This also helped with our learning of the language as we had a chance to apply case expressions to simplify the code
+- Loading Bitmap Images to use in our worlds: https://github.students.cs.ubc.ca/zwang110/haskell-project/blob/f25a4bc2c5fa304eff183aafb0381d1caf9dc467/haskell/app/Game.hs#L88-L94
+  - This allows the user to have a more visual experience and truly see how the game correlates to the TV show, Squid Game
+- Using Gloss' play function: https://github.students.cs.ubc.ca/zwang110/haskell-project/blob/f25a4bc2c5fa304eff183aafb0381d1caf9dc467/haskell/app/Game.hs#L105-L112
+  -  This allows the user to play the game where a window pops up at the start screen
 
 
-### How to test and run the code: Haskell
-#### To run
-##### Windows
+## How to run the MVP
+### To run the game (Windows):
+In the root enter: 
 ```
-cabal install --lib gloss
+make haskell-eval
+main
 ```
-If that command does not work, try:
+Alternatively, enter:
 ```
-stack install gloss
-```
-In package.yaml, add gloss to dependencies under executables (if it is not already there)
-If there is an error, follow the instructions here: http://gloss.ouroborus.net/#FrequentlyAskedQuestionsFAQ 
-```
-cd haskell
-stack build
-stack exec my-project-exe
-```
-##### Mac
-```
-cabal install --lib gloss
 cd haskell
 cd app
-ghc Main
-./Main
+ghci Game.hs
+main
+```
+Note: If this still does not work, you may need to enter this before:
+```
+cd haskell-project-master
 ```
 
-If the above method does not work, try:
+### To run the HUnit Tests:
 ```
-stack install gloss
-```
-In package.yaml, add gloss to dependencies under executables (if it is not already there)
-If there is an error, follow the instructions here: http://gloss.ouroborus.net/#FrequentlyAskedQuestionsFAQ 
-```
+cabal install HUnit
 cd haskell
-stack build
-stack exec my-project-exe
+cd app
+ghci Tests.hs
+runTestTT tests
+```
+If the tests are successful, you should see that 1 test was tried, and there were 0 failures.
+If the tests do not load, enter
+```
+:set -package HUnit
+:l Tests.hs
+runTestTT tests
 ```
 
-#### To test
-1. Type "a"
-2. Type "b"
-3. Type "c"
-4. Type "d"
+## Guide to New Learning
+### How the new learning was essential for the project
+Learning how to use the Gloss library was essential for the project in order to create a GUI. By learning the Gloss library, we were able to create an interface for the user to visually see and interact. This was especially important for the project since we wanted the user to be able to visualize a curved line being drawn on the screen to reference Squid Game’s dalgona challenge as a form of motivation to continue with the game and study concepts of Haskell at the same time. To create even more motivation, the Gloss library conveniently has functions to deal with bitmap data, allowing us to incorporate images to make references to the TV show more evident. The Gloss library also helped with key and event handling for the user to interact with the program. This was necessary for the project since we needed to use what the user types as their answer in order to determine whether they had succeeded to move on to the next question or if the game was over. Lastly, the Gloss library’s given play function helped make game play convenient and was necessary for the user to actually play the game.
 
-##### Some interesting cases to try
-* Typing these out of order
-   * such as “d”, “c”, “b”, “a”
-    * Notice how there is no curve until the last letter because "d", "c", and "b" were not the correct answers to the first three questions
-    * While a curve is shown for "a" despite it not being the correct answer for the last question, this is fine because the proof of concept does not deal with this and the minimal viable project would have ended the game
-* Typing less/more than four letters (from “a”, “b”, “c”, “d”)
-  * such as “a”, “b”, “c”
-    * Notice how the circle is incomplete. This would mean that the user has no answered all the questions required to complete the level.
-   * such as “a”, “b”, “c”, “d”, “a”
-    * Notice how no additional curve is drawn. This means that there are no more questions left in the level.
-* Typing any other keys
-  * such as “o”, “n”, “e”, “t”
-    * Notice how the screen remains blank because none of those letters are possible options
+### Where the new learning was employed
+- Setting up the window using Gloss: https://github.students.cs.ubc.ca/zwang110/haskell-project/blob/f25a4bc2c5fa304eff183aafb0381d1caf9dc467/haskell/app/Game.hs#L45-L51
+- Handling keys and events using Gloss: https://github.students.cs.ubc.ca/zwang110/haskell-project/blob/f25a4bc2c5fa304eff183aafb0381d1caf9dc467/haskell/app/Game.hs#L62-L74
+- Loading Bitmaps: https://github.students.cs.ubc.ca/zwang110/haskell-project/blob/f25a4bc2c5fa304eff183aafb0381d1caf9dc467/haskell/app/Game.hs#L88-L94
+- Using the play function in Gloss: https://github.students.cs.ubc.ca/zwang110/haskell-project/blob/f25a4bc2c5fa304eff183aafb0381d1caf9dc467/haskell/app/Game.hs#L105-L112
 
+
+### How the project benefits from the application of our new learning
+From the application of our new learning, the project benefits in that we can create a more interactive way for students to test themselves about Haskell. Learning and applying the Gloss library provided a painless way to deal with graphics in order to provide a visual experience for users. Our new learning also benefited the project in that by combining pattern matching along with key events, handling user input became a seamless process. This also made updating worlds much easier than procedural programming. Furthermore, the project also benefited from our additional learning of incorporating Bitmaps. By doing so, the user is able to clearly see how our game incorporates elements of the TV show, as well as create a visually stimulating experience for the user. All in all, the MVP goes beyond what we had initially proposed and helped us explore the Gloss library in an exciting way.

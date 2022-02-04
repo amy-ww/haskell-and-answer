@@ -105,12 +105,3 @@ stack exec my-project-exe
   * such as “o”, “n”, “e”, “t”
     * Notice how the screen remains blank because none of those letters are possible options
 
-
-
-### How to test and run the code: Prolog
-
-Replace this section with instructions to us for how to test and run your code.
-
-Instructions coming soon, but we expect you'll use the [Prolog Unit Testing](https://www.swi-prolog.org/pldoc/doc_for?object=section(%27packages/plunit.html%27)) library for testing and that we'll be able to run your code with `swipl`.
-
-

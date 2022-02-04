@@ -8,9 +8,9 @@ This project is in fulfillment of the [CPSC 312 2021W1 project requirements](htt
 
 Our team is:
 
-+ Roger Huang (75776922)
-+ Amy Wang (83715607)
-+ Winnie Wen (90000183)
++ Roger Huang
++ Amy Wang
++ Winnie Wen
 
 We call ourselves: Dalgona Players
 
